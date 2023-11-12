@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="toolbarTitle"
+            type="String" />
+        <variable
+            name="homeFragment"
+            type="com.ao.mytodoapp.ui.fragment.HomeFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".ui.fragment.HomeFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeRcView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeToolbarTitle" />
+
+        <TextView
+            android:id="@+id/homeToolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="@{toolbarTitle}"
+            android:textAllCaps="false"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/homeFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:src="@drawable/add_icon"
+            app:backgroundTint="@color/material_dynamic_primary20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{() -> homeFragment.fabAction(homeFab)}"
+            app:tint="@android:color/white"
+            android:importantForAccessibility="no" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Todo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_hint_text">ToDo giriniz..</string>
+    <string name="create_todo_toolbar">Todo Oluştur</string>
+    <string name="create_button_text">Oluştur</string>
+</resources>

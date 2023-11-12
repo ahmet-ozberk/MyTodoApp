@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ao.mytodoapp.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/homeToCreate"
+            app:destination="@id/createFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.ao.mytodoapp.ui.fragment.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" />
+</navigation>
