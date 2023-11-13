@@ -71,7 +71,7 @@
             android:layout_marginBottom="48dp"
             android:background="@drawable/button_style"
             android:text="@string/create_button_text"
-            android:onClick="@{() -> createFragment.createTodo()}"
+            android:onClick="@{() -> createFragment.insertTodo(createTextInput.getText().toString())}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
